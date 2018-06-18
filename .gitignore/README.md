@@ -1,2 +1,0 @@
-# KINO
-system kinowy 
