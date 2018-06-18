@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/8.0.121" fx:controller="tool.Rooms">
+    <children>
+        <SplitPane dividerPositions="0.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="50.0" minWidth="200.0" prefWidth="800.0">
+                    <children>
+                        <TableView fx:id="tabelka" editable="true" prefHeight="600.0" prefWidth="800.0"
+                                   tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0"
+                                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn id="number" maxWidth="160.0" minWidth="60.0" prefWidth="100.0"
+                                             text="Number"/>
+                                <TableColumn id="seats" maxWidth="160.0" minWidth="60.0" prefWidth="100.0"
+                                             text="Seats"/>
+                                <TableColumn id="type" maxWidth="160.0" minWidth="60.0" prefWidth="120.0" text="Type"/>
+                                <TableColumn id="delete" maxWidth="100.0" minWidth="90.0" prefWidth="90.0"
+                                             resizable="false" text="Action"/>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minWidth="50.0" prefWidth="180.0">
+                    <children>
+                        <VBox prefHeight="600.0" prefWidth="180.0" AnchorPane.bottomAnchor="0.0"
+                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <TextField fx:id="number" promptText="Number"/>
+                                <TextField fx:id="seats" promptText="Seats"/>
+                                <ComboBox fx:id="type" prefWidth="+Infinity" promptText="Type"/>
+                                <Button mnemonicParsing="false" onAction="#add" onKeyPressed="#addOnEnter"
+                                        prefWidth="+Infinity" text="Add"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
