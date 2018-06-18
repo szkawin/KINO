@@ -1,0 +1,8 @@
+.gitignore
+.idea/
+target/
+ppa2.iml
+testdb.tmp/
+testdb2.tmp/
+testdb*
+testdb2*
